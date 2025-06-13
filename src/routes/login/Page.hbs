@@ -1,0 +1,24 @@
+<div class="{{ styles.card }}">
+    <form class="{{ styles.loginForm }}">
+        <div class="{{ styles.fieldset }}">
+            <legend class="{{ styles.legend }}">{{ formName }}</legend>
+            {{#each fields}}
+                {{> FormItem this}}
+            {{/each}}
+        </div>
+        {{> Button
+                type="submit"
+                label="Sign in"
+                styles=buttonStyles
+        }}
+        <span class="{{  styles.info }}">
+            <span class="{{ styles.text }}">Don’t have an account?
+                <a class="{{ styles.link }}" data-page="signup" href="/signup">Create profile</a>
+            </span>
+            <span class="{{ styles.text }}">
+                <a class="{{ styles.link }}" href="#">Forgot password?</a>
+            </span>
+        </span>
+    </form>
+</div>
+
